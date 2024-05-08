@@ -6,7 +6,7 @@ import ru.netology.javaqamvn.rest.services.Rest;
 public class RestTest {
 
     @ParameterizedTest
-    @CsvFileSource(files = "scr/test/resources/Rest.csv")
+    @CsvFileSource(files="src/test/resources/Rest.csv")
     public void shouldCalcMonth(int income, int expenses, int threshold, int expected) {
         Rest service = new Rest();
         int actual = service.calculate(income, expenses, threshold);
